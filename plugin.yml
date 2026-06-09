@@ -1,0 +1,9 @@
+name: AntiSpam
+main: AntiSpam\Main
+version: 1.0.0
+api: 5.0.0
+author: ZyberPE
+
+permissions:
+  antispam.bypass:
+    default: op
