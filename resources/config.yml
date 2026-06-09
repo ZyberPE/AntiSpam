@@ -1,0 +1,17 @@
+# Chat cooldown in seconds
+cooldown: 3
+
+messages:
+  spam: "&cPlease wait {time}s before chatting again."
+  blocked-word: "&cThat message contains a prohibited word."
+
+# Completely blocks the message
+banned-words:
+  - "nigger"
+  - "faggot"
+
+# Replaces words with *****
+filtered-words:
+  - "bitch"
+  - "fuck"
+  - "shit"
