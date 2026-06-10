@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener{
         /*
          * COOLDOWN CHECK
          */
-        if(!$player->isOp() && !$player->hasPermission("antispam.bypass")){
+        if(!$player->hasPermission("antispam.bypass")){
 
             if($this->getConfig()->getNested("cooldown.enabled", true)){
 
@@ -70,7 +70,6 @@ class Main extends PluginBase implements Listener{
          * CAPS PROTECTION
          */
         if(
-            !$player->isOp() &&
             !$player->hasPermission("antispam.caplock") &&
             $this->getConfig()->getNested("caps.enabled", true)
         ){
@@ -201,10 +200,7 @@ class Main extends PluginBase implements Listener{
 
         foreach($this->getServer()->getOnlinePlayers() as $online){
 
-            if(
-                $online->isOp() ||
-                $online->hasPermission("antispam.see")
-            ){
+            if($online->hasPermission("antispam.see")){
                 $online->sendMessage($staffMessage);
             }
         }
