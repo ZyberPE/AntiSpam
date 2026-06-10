@@ -1,17 +1,65 @@
-# Chat cooldown in seconds
-cooldown: 3
+# ==========================================
+# AntiSpam Configuration
+# ==========================================
+
+cooldown:
+  enabled: true
+
+  # Time in seconds between messages
+  seconds: 3
+
+caps:
+  enabled: true
+
+  # Ignore messages shorter than this
+  min-length: 6
+
+  # Percentage of capital letters required
+  # before the message is blocked
+  percentage: 70
 
 messages:
-  spam: "&cPlease wait {time}s before chatting again."
+
+  # Chat cooldown message
+  spam: "&cPlease wait &f{time}s &cbefore chatting again."
+
+  # Banned word message
   blocked-word: "&cThat message contains a prohibited word."
 
-# Completely blocks the message
+  # Filtered word warning
+  filtered-word: "&eWatch your language."
+
+  # Caps spam message
+  caps-spam: "&cPlease do not use excessive capital letters."
+
+  # Staff alerts
+  staff-banned: "&c[AntiSpam] &f{player} attempted to use a banned word: &e{message}"
+
+  staff-filtered: "&6[AntiSpam] &f{player} used a filtered word: &e{message}"
+
+  staff-caps: "&e[AntiSpam] &f{player} triggered caps protection: &e{message}"
+
+# ==========================================
+# Completely blocked words
+# ==========================================
+
 banned-words:
   - "nigger"
   - "faggot"
+  - "retard"
 
-# Replaces words with *****
+# ==========================================
+# Words replaced with *****
+# ==========================================
+
 filtered-words:
   - "bitch"
   - "fuck"
   - "shit"
+  - "damn"
+  - "asshole"
+  - "bastard"
+  - "dick"
+  - "pussy"
+  - "slut"
+  - "whore"
