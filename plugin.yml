@@ -6,4 +6,13 @@ author: ZyberPE
 
 permissions:
   antispam.bypass:
+    description: Bypass chat cooldown and spam checks
+    default: op
+
+  antispam.caplock:
+    description: Bypass caps protection
+    default: op
+
+  antispam.see:
+    description: Receive AntiSpam staff alerts
     default: op
